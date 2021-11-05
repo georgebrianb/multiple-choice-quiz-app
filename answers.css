@@ -1,0 +1,64 @@
+/* Style the element that is used to open and close the accordion class */
+h2.accordion {
+    background-color: #ecf5ff;
+    color: #444;
+    cursor: pointer;
+    padding: 1.2rem;
+    width: 100%;
+    text-align: left;
+    border: 1rem;
+    outline: none;
+    transition: 0.3s;
+    margin-bottom:10px;
+}
+
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+h2.accordion.active, p.accordion:hover {
+    background-color: #c6ddf8;
+}
+
+/* Unicode character for "plus" sign (+) */
+h2.accordion:after {
+    content: '\2795'; 
+    font-size: 2rem;
+    color: rgba(86, 185, 235, 0.5);
+    float: right;
+    margin-left: 2rem;
+}
+
+/* Unicode character for "minus" sign (-) */
+h2.accordion.active:after {
+    content: "\2796"; 
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 600;
+}
+
+/* Style the element that is used for the panel class */
+
+div.panel {
+    /* padding: 0 18px; */
+    background-color: ecf5ff;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    margin-bottom: 0.9rem;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 29rem; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-group {
+    margin-bottom: 5rem;
+}
